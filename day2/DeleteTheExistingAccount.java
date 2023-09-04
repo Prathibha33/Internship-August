@@ -39,17 +39,17 @@ public class DeleteTheExistingAccount {
 		WebElement accountTab  = driver.findElement(By.xpath("//span[text()='Accounts']/.."));
 		driver.executeScript("arguments[0].click();", accountTab);
 		driver.findElement(By.xpath("//input[@name=\"Account-search-input\"]")).sendKeys("Prathibha",Keys.ENTER);
-		WebElement dropdown = driver.findElement(By.xpath("//a[contains(@class,'rowActionsPlaceHolder')]"));
+		WebElement dropdown = driver.findElement(By.xpath("//div[@data-aura-class='forceVirtualAction']/*"));
 		driver.executeScript("arguments[0].click();", dropdown);
-		driver.findElement(By.xpath("//a[@title='Delete']")).click();
+		WebElement del = driver.findElement(By.xpath("//a[@title='Delete']"));
+		driver.executeScript("arguments[0].click();", del);
 		driver.findElement(By.xpath("//button[@title=\"Delete\"]")).click();
-		driver.findElement(By.xpath("//input[@name=\"Account-search-input\"]")).sendKeys("Prathibha",Keys.ENTER);
-		String text = driver.findElement(By.xpath("//span[text()='No items to display.']")).getText();
-		if(text.contains("Prathibha")) {
-			System.out.println("Account Prathibha was not deleted");
+		String text = driver.findElement(By.xpath("//div[@data-aura-class=\"forceToastMessage\"]")).getText();
+		if(text.contains("Prathibha1")) {
+			System.out.println("Account Prathibha is deleted");
 		}
 		else {
-			System.out.println("Account Prathibha was deleted");
+			System.out.println("Account Prathibha is not deleted");
 		}
 	}
 

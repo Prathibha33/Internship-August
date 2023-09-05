@@ -37,6 +37,8 @@ public class VerifyLegalEntitiessortorderbyLastModifiedDate {
 		driver.executeScript("arguments[0].click();", le);
 		WebElement le1 = driver.findElement(By.xpath("//span[text()='Legal Entities']"));
 		driver.executeScript("arguments[0].click();", le1);
+		WebElement lmd = driver.findElement(By.xpath("//span[text()='Last Modified Date']"));
+		driver.executeScript("arguments[0].click();", lmd);
 		String text = driver.findElement(By.xpath("//span[@data-aura-class='uiOutputDateTime']")).getText();
 		System.out.println(text);
 		//String[] split=text.split(",");

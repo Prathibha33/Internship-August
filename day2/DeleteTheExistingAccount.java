@@ -45,7 +45,7 @@ public class DeleteTheExistingAccount {
 		driver.executeScript("arguments[0].click();", del);
 		driver.findElement(By.xpath("//button[@title=\"Delete\"]")).click();
 		String text = driver.findElement(By.xpath("//div[@data-aura-class=\"forceToastMessage\"]")).getText();
-		if(text.contains("Prathibha1")) {
+		if(text.contains("Prathibha")) {
 			System.out.println("Account Prathibha is deleted");
 		}
 		else {

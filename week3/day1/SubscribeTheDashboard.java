@@ -55,7 +55,7 @@ public class SubscribeTheDashboard {
 		//WebElement dashboardstab = driver.findElement(By.xpath("//span[text()='Dashboards']"));
 		driver.executeScript("arguments[0].click();", dashboardstab);
 		
-        //Search the Dashboard 'Salesforce Automation by Your Name'
+                //Search the Dashboard 'Salesforce Automation by Your Name'
 		String search1 ="Prathibha";
 		WebElement search = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@placeholder='Search recent dashboards...']")));
 		//WebElement search = driver.findElement(By.xpath("//input[@placeholder='Search recent dashboards...']"));
@@ -64,10 +64,10 @@ public class SubscribeTheDashboard {
 		
 		//Click on the Dropdown icon
 		WebElement dd = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@class='slds-button slds-button_icon-border slds-button_icon-x-small']")));
-        //driver.findElement(By.xpath("//button[@class='slds-button slds-button_icon-border slds-button_icon-x-small']")).click();
+                //driver.findElement(By.xpath("//button[@class='slds-button slds-button_icon-border slds-button_icon-x-small']")).click();
 		driver.executeScript("arguments[0].click();", dd);
 		
-	    //Select Subscribe
+	        //Select Subscribe
 		WebElement subscribe = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Subscribe']")));
 		//WebElement subscribe = driver.findElement(By.xpath("//span[text()='Subscribe']"));
 		driver.executeScript("arguments[0].click();", subscribe);
@@ -76,7 +76,7 @@ public class SubscribeTheDashboard {
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Daily']"))).click();
 		//driver.findElement(By.xpath("//span[text()='Daily']")).click();
 		
-	    //Click on Save in the Edit Subscription popup window
+	        //Click on Save in the Edit Subscription popup window
 		WebElement save = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Save']")));
 		//WebElement save = driver.findElement(By.xpath("//span[text()='Save']"));
 		driver.executeScript("arguments[0].click();", save);
@@ -90,6 +90,8 @@ public class SubscribeTheDashboard {
 		}else {
 			System.out.println("Dashboard is not subcribed");
 		}
+
+		//close the browser
 		driver.close();
 		
 

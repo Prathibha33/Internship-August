@@ -14,7 +14,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class EditTheExistingWorkTypeGroup {
 	public static void main(String[] args) throws InterruptedException {
 		
-	    //Launch the Chromebrowser
+	        //Launch the Chromebrowser
 		ChromeOptions option = new ChromeOptions();
 		option.addArguments("--disable-notifications");
 		ChromeDriver driver = new ChromeDriver(option);
@@ -82,6 +82,9 @@ public class EditTheExistingWorkTypeGroup {
 			System.out.println("Existing work type group is not edited");
 
 		}
+		
+		//Close the Browser
+		drive.close();
 
 		
 

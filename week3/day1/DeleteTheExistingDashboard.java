@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class DeleteTheExistingDashboard {
 	public static void main(String[] args) throws InterruptedException {
-		        //Launch the browser
+		                //Launch the browser
 				ChromeOptions option = new ChromeOptions();
 				option.addArguments("--disable-notifications");
 				ChromeDriver driver = new ChromeDriver(option);
@@ -54,7 +54,7 @@ public class DeleteTheExistingDashboard {
 				//WebElement dashboardstab = driver.findElement(By.xpath("//span[text()='Dashboards']"));
 				driver.executeScript("arguments[0].click();", dashboardstab);
 				
-		        //Search the Dashboard 'Salesforce Automation by Your Name'
+		                //Search the Dashboard 'Salesforce Automation by Your Name'
 				String search1 ="Prathibha";
 				WebElement search = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@placeholder='Search recent dashboards...']")));
 				//WebElement search = driver.findElement(By.xpath("//input[@placeholder='Search recent dashboards...']"));
@@ -63,29 +63,30 @@ public class DeleteTheExistingDashboard {
 				
 				//Click on the Dropdown icon
 				WebElement dd = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@class='slds-button slds-button_icon-border slds-button_icon-x-small']")));
-		        //driver.findElement(By.xpath("//button[@class='slds-button slds-button_icon-border slds-button_icon-x-small']")).click();
+		                //driver.findElement(By.xpath("//button[@class='slds-button slds-button_icon-border slds-button_icon-x-small']")).click();
 				driver.executeScript("arguments[0].click();", dd);
 				
-		       //Select Delete
-			   WebElement delete = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Delete']")));
-               //WebElement delete = driver.findElement(By.xpath("//span[text()='Delete']"));
-               driver.executeScript("arguments[0].click();", delete);
+		                //Select Delete
+			        WebElement delete = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Delete']")));
+                                //WebElement delete = driver.findElement(By.xpath("//span[text()='Delete']"));
+                                driver.executeScript("arguments[0].click();", delete);
                
-               //Click on the Delete option in the displayed popup window
-               wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//span[text()='Delete'])[2]"))).click();
-               //WebElement delete1 = driver.findElement(By.xpath("(//span[text()='Delete'])[2]"));
-               //driver.executeScript("arguments[0].click();", delete1);
+                                //Click on the Delete option in the displayed popup window
+                                wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//span[text()='Delete'])[2]"))).click();
+                                //WebElement delete1 = driver.findElement(By.xpath("(//span[text()='Delete'])[2]"));
+                                //driver.executeScript("arguments[0].click();", delete1);
               
-               //Verify Whether Dashboard is Deleted using Dashboard Name
-               String toastermsg = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@data-key='success']"))).getText();
-               // String toastermsg = driver.findElement(By.xpath("//div[@data-key='success']")).getText();
-               System.out.println(toastermsg);
-               if(toastermsg.contains("Success")) {
-        	   System.out.println("Dashboard was deleted");
-               }else {
-        	   System.out.println("Dashboard was not deleted");
-               }
-               driver.close();
+                                //Verify Whether Dashboard is Deleted using Dashboard Name
+                                String toastermsg = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@data-key='success']"))).getText();
+                                // String toastermsg = driver.findElement(By.xpath("//div[@data-key='success']")).getText();
+                                System.out.println(toastermsg);
+                                if(toastermsg.contains("Success")) {
+        	                   System.out.println("Dashboard was deleted");
+                                }else {
+        	                   System.out.println("Dashboard was not deleted");
+                                }
+                                //close the browser  
+		                driver.close();
         
 }
 }

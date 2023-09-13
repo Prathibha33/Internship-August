@@ -1,19 +1,4 @@
 package week3.day3;
-//Login to Login | Salesforce 
-//
-//Click on the toggle menu button from the left corner
-//
-//Click View All and click Work Type Groups from App Launcher
-//
-//Click on the Work Type Group tab 
-//
-//Search the Work Type Group 'Salesforce Automation by Your Name'
-//
-//Click on the Dropdown icon and Select Delete
-//
-//Click on the Delete option in the displayed popup window.
-//
-//Verify Whether Work Type group is Deleted using Work Type Group Name
 
 import java.time.Duration;
 
@@ -83,15 +68,15 @@ public static void main(String[] args) throws InterruptedException {
 		delete1.click();
 		
 		//Verify Whether Work Type group is Deleted using Work Type Group Name
-        String toastermsg = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@aria-label='Success']"))).getText();
-        System.out.println(toastermsg);
-        if(toastermsg.contains(search)) {
-        	System.out.println("Work type group Prathibha is deleted");
-        }else {
-        	System.out.println("Work type group Prathibha is not deleted");
+                String toastermsg = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@aria-label='Success']"))).getText();
+                System.out.println(toastermsg);
+                if(toastermsg.contains(search)) {
+        	   System.out.println("Work type group Prathibha is deleted");
+                }else {
+        	   System.out.println("Work type group Prathibha is not deleted");
         
-        //Close the browser
-        driver.close();
+                //Close the browser
+                driver.close();
 
         }
         	

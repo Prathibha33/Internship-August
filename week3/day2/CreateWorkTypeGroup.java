@@ -14,7 +14,7 @@ public class CreateWorkTypeGroup {
 	
 public static void main(String[] args) throws InterruptedException {
 	
-    //Launch the Chromebrowser
+        //Launch the Chromebrowser
 	ChromeOptions option = new ChromeOptions();
 	option.addArguments("--disable-notifications");
 	ChromeDriver driver = new ChromeDriver(option);

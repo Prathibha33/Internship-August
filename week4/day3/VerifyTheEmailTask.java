@@ -137,6 +137,9 @@ public static void main(String[] args) throws InterruptedException, IOException 
 			System.out.println("email task is not completed");
 
 		}
+
+	        //Get the Title
+		System.out.println(driver.getTitle());
 		
 		//Close the browser
 		driver.close();

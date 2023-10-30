@@ -2,24 +2,24 @@ Feature: Edit the legal entity
 
 Scenario: Positive Edit the legal entity
 
-Given Initialize the driver
-Given Enter the username
-Given Enter the password
+
+Given Enter the username 'prathi@testleaf.com'
+And Enter the password as 'Supradi3149'
 When Click on the login button
 Then Verify the login
 When Click on toggle menu
-When Click on view all
-When Click on legal entities
+And Click on view all
+And Click on 'legal entities'
 When Click on legal entities tab
-Given Search for the legal entity
-When Click on legal entity dropdown
-When Click on edit option
-When Clear the company name and enter Testleaf
-When Clear the description and enter SalesForce
-When Click on status dropdown
-When Choose the status as Active
-When Click on save button
-Given search for the legal entity
+Given Enter name in the search bar as 'Salesforce Automation by Prathibha'
+When Click on the dropdown
+And Click on edit option
+And Clear the company name and enter Testleaf
+And Clear the description and enter SalesForce
+And Click on status dropdown
+And Choose the status as Active
+And Click on save button
+Given Enter name in the search bar as 'Salesforce Automation by Prathibha'
 When Click on first displayed legal entity
 Then Verify the status as Active
 

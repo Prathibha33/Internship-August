@@ -2,21 +2,21 @@ Feature: Edit opportunity
 
 Scenario: Positive Edit the legal entity
 
-Given Initialize the driver
-Given Enter the username
-Given Enter the password
+
+Given Enter the username 'prathi@testleaf.com'
+And Enter the password as 'Supradi3149'
 When Click on the login button
 Then Verify the login
 When Click on toggle menu
-When Click on view all
-When Click on sales
-When Click on opportunity tab
-Given Search for the opportunity
-When Click on opportunity dropdown
-When Click on edit
-When Choose close date as tomorrow date
-When Select stage as perception analysis
+And Click on view all
+And Click on sales
+And Click on opportunity tab
+Given Enter name in the search bar as 'Salesforce Automation by Prathibha'
+When Click on the dropdown
+And Click on edit option
+And Choose close date as tomorrow date
+And Select stage as perception analysis
 Given Enter the description as SalesForce
-When Click on save button
-Given Search for the opportunity
+And Click on save button
+Given Enter name in the search bar as 'Salesforce Automation by Prathibha'
 Then Verify the stage as perception analysis
